@@ -1,0 +1,30 @@
+<!--
+ * @Descripttion: 
+ * @Author: denghuawen3<denghuawen3@jd.com>
+ * @Date: 2021-11-22 19:45:31
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id='con'>this is con</div>
+    <script>
+        var con = document.getElementById('con');
+        con.onclick = function click1() {
+            setTimeout(function setTimeout1() {
+                con.textContent = 0;
+            }, 0)
+            setTimeout(function testteststtetsetteste() {
+                console.log(1);
+                con.textContent = 1;
+            }, 0)
+        };
+    </script>
+</body>
+</html>

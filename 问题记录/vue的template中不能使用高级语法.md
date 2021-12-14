@@ -1,0 +1,4 @@
+vue的template里面只使用vue-loader进行解析
+对于还在提案中的语法他是不支持的
+所以template里面不能使用高级语法
+而它的script是使用了babel的

@@ -1,0 +1,41 @@
+<!--
+ * @Descripttion: 
+ * @Author: denghuawen3<denghuawen3@jd.com>
+ * @Date: 2021-09-22 10:15:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">inner</div>
+    </div>
+
+    <div class="ajax-btn">ajax</div>
+
+    <script>
+        const outer = document.querySelector('.outer');
+        const inner = document.querySelector('.inner');
+        outer.addEventListener('click', () => {
+            console.log('outer');
+        });
+        inner.addEventListener('click', () => {
+            console.log('inner');
+            window.location.replace('https://www.baidu.com');
+        });
+
+        const ajaxBtn = document.querySelector('ajax-btn');
+        ajaxBtn.addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('get', 'https://www.mxnzp.com/api/history/today?type=1&app_id=ruqfp8orkzcgovsl&app_secret=cmhNUVZRVjZkaEZmU0R3VGltaDYvZz09');
+            xhr.send();
+        });
+    </script>
+    <!-- <script type="module" src="test.js"></script> -->
+</body>
+</html>

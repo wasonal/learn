@@ -1,0 +1,3 @@
+location.replace和location.href=xx
+这两种进行链接跳转的方式是异步的，所以需要对跳转语句进行return
+否则可能会执行跳转后的语句

@@ -1,0 +1,3 @@
+想着在父组件的computed里面通过
+refs.child.data来进行监听数值
+没想到数值变化之后没有触发父组件的computed
