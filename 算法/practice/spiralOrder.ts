@@ -3,6 +3,7 @@ function spiralOrder(matrix: number[][]): number[] {
     let top = 0, bottom = matrix.length - 1;
     const ans: number[] = [];
     while (left <= right && top <= bottom) {
+        debugger
         for (let i = left; i <= right; i++) {
             ans.push(matrix[top][i]);
         }
