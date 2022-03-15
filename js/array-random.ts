@@ -24,3 +24,14 @@ const test = (fn: (arr: number[]) => number[]) => {
 
     return judge;
 }
+
+interface Member {
+    name?: string;
+    age?: number;
+}
+
+type Omitt<A, B> = {
+    [K in Exclude<keyof A, B>]: A[K]
+};
+
+type t = Omitt<'a' | 'b', 'a' | 'c'>;
