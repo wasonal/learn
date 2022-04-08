@@ -7,14 +7,19 @@
 Promise.fakeAll = function fakeAll<T>(parr: Promise<T>[]) {
     let finishCount = 0;
     const resArr: Array<T> = [];
-    parr.forEach((p, i) => {
-    Promise.resolve(p).then((res) => {
-        finishCount++;
-        resArr[i] = res;
-        if (finishCount === parr.length) {
-        return resArr;
-        }
-    });
+    return new Promise((resolve, reject) => {
+        parr.forEach((p, i) => {
+            Promise.resolve(p).then((res) => {
+                finishCount++;
+                resArr[i] = res;
+                if (finishCount === parr.length) {
+                    resolve(resArr);
+                }
+            })
+            .catch((e) => {
+                reject(e);
+            });
+        });
     });
 };
 ```
