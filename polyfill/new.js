@@ -3,7 +3,7 @@ function fakeNew(classFunc) {
     let o = {};
     const res = classFunc.apply(o, args);
     o.__proto__ = classFunc.prototype;
-    return typeof res !== 'object' ? o : res;
+    return typeof res !== 'object' && res !== null ? o : res;
 }
 
 function Person(name) {
